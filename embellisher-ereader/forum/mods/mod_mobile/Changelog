@@ -1,0 +1,8 @@
+Changelog:
+----------
+
+2010-03-28 v1.0.1 Thomas Seifert
+	- added the file page to the allowed pages and category, version fields to info.txt
+	
+2010-02-27 v1.0.0
+    - initial release by Brian Moon

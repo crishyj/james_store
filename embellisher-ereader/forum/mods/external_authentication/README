@@ -1,0 +1,121 @@
+======== External Authentication v5.2.1.04 ========
+Created by Joe Curia (azumandias _ at _ hotmail.com)
+Original phorum coding by the Phorum Development Team (http://www.phorum.org)
+
+========        Brief Description         ========
+This module allows authentication to Phorum from external applications.  It 
+uses a chosen external application as the authentication master.  That external 
+application controls registration and login and passes that information on to 
+Phorum.  Only the applications listed below are supported at this time.  If 
+yours is not listed, please request it in this module's thread on the Phorum 
+site.
+
+========      Supported Applications      ========
+ - Drupal 6.x - www.drupal.org
+ - Elgg 1.1 - www.elgg.org
+ - GroupOffice - www.group-office.com - by hansvd
+
+========      Installation and Usage      ========
+This module deals only with authenticating to Phorum from an external 
+application.  Creating an integrated theme, linking to Phorum, and other 
+customizations are beyond the scope of this module.
+
+You must first install your external application and Phorum.  Next, if you only 
+downloaded the core version of this module, you must download and install the 
+plugin for your external application.  The complete plugin folder must be 
+placed in the phorum_root/mods/external_authentication/plugins_bin folder, just 
+as you placed the external_authentication folder in the phorum_root/mods folder 
+to install this module  
+
+Next, you can enable this module and set it to use your external app as the 
+authentication master.  You should also input the path to your application. 
+Please note that this is the server path used by PHP to move between Phorum and 
+your application.
+
+While the settings do exist for allowing registration, login, and logout in your 
+Phorum install, it is highly recommended that you disable these.  The 
+registration will not create a user in your external application.  Allowing 
+Phorum login would allow users to login to the Phorum even if they have been 
+deleted or banned from your external application.
+
+Please note: It is important that you use, or at least create, a user in your 
+external application with the same username as your Phorum admin.  Because the 
+external application is the authentication master, the external user will 
+overwrite the Phorum user's password and assume that user's rights.  Thus, if 
+you do not create an external user with the same username as your Phorum admin, 
+another visitor could register with that username and assume the admin role in 
+Phorum.
+
+This module may have different settings based on the external application you
+are using.
+
+========                Todo              ========
+ - Add support for more applications
+ - Add further features as requested or as they pop into my head
+
+========               Files              ========
+external_authentication\
+    Changelog
+	  external_authentication.php
+    info.txt
+    Plugin_Development_Guide.txt
+	  README
+  	settings.php
+    db_bin\
+        db_functions.php
+    js_bin\
+        disable_links.js
+    lang\
+        english.php
+    plugins_bin\
+        base_plugin\
+            hook_common_post_user.php
+            hook_common.php
+            hook_start_output.php
+            hook_user_authenticate.php
+            hook_user_delete.php
+            hook_user_session_restore.php
+            info.php
+            settings.php
+            settings_post.php
+            lang\
+                english.php
+        drupal_6_x
+            drupal_block_recent_messages.php
+            drupal_user_after_update.php
+            drupal_user_insert.php
+            drupal_user_synchronization_form_submit.php
+            drupal_user_synchronization_form_validate.php
+            drupal_user_validate.php
+            hook_common_post_user.php
+            hook_common.php
+            hook_user_delete.php
+            hook_user_save.php
+            hook_user_session_restore.php
+            info.php
+            README
+            settings.php
+            settings_post.php
+            lang\
+                english.php
+            phorum_module_external_authentication\
+                phorum_module_external_authentication.info
+                phorum_module_external_authentication.install
+                phorum_module_external_authentication.module
+        elgg_1_1\
+            info.php
+            settings.php
+            settings_post.php
+            user_authentication.php
+            user_session_restore.php
+            phorum_mod_external_authentication\
+                manifest.xml
+                start.php
+                views\
+                    default\
+                        settings\
+                            phorum_mod_external_authentication\
+                                edit.php
+        groupoffice_plugin\
+            info.php
+            user_session_restore.php

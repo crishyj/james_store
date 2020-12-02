@@ -1,0 +1,27 @@
+title: External Authentication
+
+category: admin
+category: integration
+category: user_management
+
+author: Joe Curia
+desc:  This module allows authentication to Phorum from external applications
+version: 5.2.1.04
+
+hook: lang
+
+hook: after_register|phorum_mod_external_authentication_after_register
+hook: before_footer|phorum_mod_external_authentication_before_footer
+hook: common_post_user|phorum_mod_external_authentication_common_post_user
+hook: common|phorum_mod_external_authentication_common
+hook: css_register|phorum_mod_external_authentication_css_register
+hook: start_output|phorum_mod_external_authentication_start_output
+hook: page_login|phorum_mod_external_authentication_page_login
+hook: page_register|phorum_mod_external_authentication_page_register
+hook: posting_custom_action|phorum_mod_external_authentication_posting_custom_action
+hook: user_authenticate|phorum_mod_external_authentication_user_authenticate
+hook: user_delete|phorum_mod_external_authentication_user_delete
+hook: user_save|phorum_mod_external_authentication_user_save
+hook: user_session_restore|phorum_mod_external_authentication_user_session_restore
+
+url: http://www.phorum.org/phorum5/read.php?62,134494

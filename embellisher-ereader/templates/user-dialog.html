@@ -1,0 +1,177 @@
+<script src="lib/md5.js"></script>
+<div tabindex="-1" class="modal fade" id="user-dialog" role="dialog" aria-labelledby="user-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+           <!-- <div class="modal-header">
+            <h4 class="modal-title" id="settings-label">{{strings.settings}}</h4>
+           </div -->
+               
+            <div class="modal-body">
+           <button tabindex="999" type="button" style="position:relative;right:5px;" class="close" id="closeUserCross" data-dismiss="modal" title="{{strings.i18n_close}}" aria-label="{{strings.i18n_close}}"><span aria-hidden="true">&times;</span></button>
+
+           
+           <div class="tab-content">
+                <div id="tab-user-main" class="tab-pane active">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">
+						  <h3 id="usernametitle" class="panel-title">{{user.name}}</h3>
+						  <h4 id="usernametype" class="panel-subtitle">{{user.type}}</h4>
+						</div>
+						<div class="panel-body">
+						  <div class="row">
+							<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle profilepicture"> </div>
+							
+							<div class=" col-md-9 col-lg-9 "> 
+							  <table class="table table-user-information">
+								<tbody>
+								  <tr class="AuthorSetting">
+									<td>Genre of writing:</td>
+									<td id="usergenre">{{user.genre_of_writing}}</td>
+								  </tr>
+								  <tr>
+									<td>Interests</td>
+									<td id="userinterest">{{user.interests}}</td>
+								  </tr>
+									
+								  <tr>
+									<td>Email</td>
+									<td><a id="useremail" href="{{user.email}}">{{user.email}}</a></td>
+								  </tr>
+									
+								 
+									</tbody>
+								</table>
+
+								<a href="admin/" class="btn btn-primary AuthorSetting">Go to publisher panel</a>
+								  
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab-user-edit" class="tab-pane active" style="display:none;">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">
+						  <h3 class="panel-title">Edit Profile</h3>
+						</div>
+						<div class="panel-body">						
+							<form role="form">
+							  <div class="form-group AuthorSetting">
+								<label for="user-genre">Genre of writing:</label>
+								<input type="text" class="form-control" id="user-genre" value="{{user.genre_of_writing}}">
+							  </div>
+							  <div class="form-group">
+								<label for="user-interests">Interests:</label>
+								<input type="text" class="form-control" id="user-interests" value="{{user.interests}}">
+							  </div>
+							  <div class="form-group" style="display:none;">
+								<label for="user-public_private">Public / Private messages:</label>
+								<input type="text" class="form-control" id="user-public_private" value="{{user.public_private}}">
+							  </div>
+							  <div class="form-group">
+								<label for="user-public_private">Change password*</label>
+								<input type="password" class="form-control" id="change-password" value="">
+								<p>* only fill in this field if you want to change your password.</p>
+							  </div>
+							  
+							 
+							</form>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div id="tab-user-login" class="tab-pane active" style="display:none;">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">
+						  <h3 class="panel-title">Login</h3>
+						</div>
+						<div class="panel-body">						
+							<form role="form">
+							  <div class="form-group">
+								<label for="user-email">E-mail:</label>
+								<input type="email" class="form-control" id="user-email" value="" required="required">
+							  </div>
+							  <div class="form-group">
+								<label for="user-password">Password:</label>
+								<input type="password" class="form-control" id="user-password" value="" required="required">
+							  </div>
+							  <div id="login_error_message" class="alert-danger"></div>
+							 
+							 <button id="buttClose" tabindex="1000" type="button" class="btn btn-default" data-dismiss="modal" title="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]" aria-label="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]">{{strings.i18n_close}}</button>
+							 <button type="submit" id="buttLoginProfile" tabindex="1000" class="btn btn-primary" title="Login" aria-label="Login">Login</button><br/>
+							 <a href="javascript:void(null);" id="ShowRegisterButt">Or create an account! </a><br/>
+							 <a href="javascript:void(null);" id="ResetPasswordButt">Lost password? </a>
+							 
+							</form>
+							
+						</div>
+					</div>
+				</div>
+
+				<div id="tab-user-register" class="tab-pane active" style="display:none;">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">
+						  <h3 class="panel-title">Register</h3>
+						</div>
+						<div class="panel-body">						
+							<form role="form">
+							  <div class="form-group">
+								<label for="register-name">Name:</label>
+								<input type="text" class="form-control" id="register-name" value="" required="required">
+							  </div>
+							  <div class="form-group">
+								<label for="register-email">E-mail:</label>
+								<input type="email" class="form-control" id="register-email" value="" required="required">
+							  </div>
+							  <div class="form-group">
+								<label for="register-password">Password:</label>
+								<input type="password" class="form-control" id="register-password" value="" required="required">
+							  </div>
+							  <div class="form-group">
+                                 <label for="registertype">Publish or read?</label>
+                                 <select class="form-control" name="type" id="registertype">
+                                    <option value="Reader">Reader</option>
+                                    <option value="Author" selected="selected">Author/Publisher</option>
+                                 </select>
+							  </div>
+							 
+                              <div class="checkbox">
+							    <label>
+							      <input name="EULA" id="registereula" type="checkbox" value="1"> I have read and accept the <a href="EULA.pdf" target="_blank">EULA</a>
+							    </label>
+							  </div>
+							  <div id="register_error_message" class="alert-danger"></div>
+							 
+							 <button id="buttClose" tabindex="1000" type="button" class="btn btn-default" data-dismiss="modal" title="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]" aria-label="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]">{{strings.i18n_close}}</button>
+							 <button type="submit" id="buttRegisterProfile" tabindex="1000" class="btn btn-primary" title="Sign up" aria-label="Sign up">Sign up</button>
+							</form>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="modal-footer" id="footer-userprofile">
+                <button id="buttClose" tabindex="1000" type="button" class="btn btn-default" data-dismiss="modal" title="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]" aria-label="{{strings.i18n_close}} [{{keyboard.SettingsModalClose}}]">{{strings.i18n_close}}</button>
+				<button id="buttLogoutProfile" tabindex="1000" type="button" class="btn btn-danger" title="Logout" aria-label="Logout">Logout</button>
+				<button id="buttEditProfile" tabindex="1000" type="button" class="btn btn-primary" title="{{strings.editAccount}}" aria-label="{{strings.editAccount}}">{{strings.editAccount}}</button>
+            </div>
+			<div class="modal-footer" id="footer-userprofile-edit" style="display:none;">
+                <button id="buttEditProfileClose" tabindex="1000" type="button" class="btn btn-default" title="{{strings.i18n_close}}" aria-label="{{strings.i18n_close}}">{{strings.i18n_close}}</button>
+				<button id="buttSaveProfile" tabindex="1000" type="button" class="btn btn-primary" title="{{strings.i18n_save_changes}}" aria-label="{{strings.i18n_save_changes}}">{{strings.i18n_save_changes}}</button>
+            </div>
+			<div class="modal-footer" id="footer-userprofile-login" style="display:none;">
+                
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+

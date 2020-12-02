@@ -1,0 +1,75 @@
+<div class="modal fade" id="buy-dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+
+      	<div id="tab-buy-main" class="tab-pane active">
+
+					<div class="panel panel-info">
+						<div class="panel-heading">
+						  <h3 id="usernametitle" class="panel-title">{{book.title}}</h3>
+						  <h4 id="usernametype" class="panel-subtitle">{{book.author}}</h4>
+						</div>
+						<div class="panel-body">
+						  <div class="row">
+						  	<div class="col-md-3 col-lg-3 " align="center"> <img alt="Book Pic" style="max-width:64px;" src="{{book.coverHref}}"> 
+						  	</div>
+							
+							<div class=" col-md-9 col-lg-9 "> 
+							 <label class="description">{{strings.buy_description}}</label><br/>
+							 <p id="bookdesc">{{book.description}}</p><br/>
+							  <table class="table table-user-information">
+								<tbody>
+									
+
+								  <tr>
+									<td>Buy now</td>
+									<td>
+										<form id="paymentform" action="" method="POST">
+											<p id="bookprice_p">{{strings.buy_price_msg}} {{strings.buy_currency}}{{book.price}}</p>
+											
+										  <input type="hidden" name="epubid" value="{{book.id}}">
+										  <input type="hidden" id="form-sessionid" name="sessionid" value="">
+										  <input type="hidden" id="form-email" name="email" value="">
+										  <input type="hidden" name="centprice" id="centpriceinput" value="{{book.realprice}}">
+										  <input type="hidden" name="token" id="stripetokeninput" value="">
+										  
+										  <label for="promocode">{{strings.buy_coupon_code}}</label>
+										  <input type="text"  class="form-control" style="width:60px;" name="promocode" id="promocode" value="">
+										  <button type="button" class="btn btn-default" id="checkpromocode" >{{strings.buy_checkcoupon}}</button>
+											<br/><br/>
+										
+
+										<button id="customstripebutton" class="btn btn-primary">{{strings.buy_text}}</button>
+
+										
+								          
+								         </form>
+										<a id="freebuybutton" style="display:none;" data-book="{{book.id}}" data-price="{{book.price}}" class="btn btn-primary" >{{strings.free_sample}}</a>
+									</td>
+								  </tr>
+									
+								 
+									</tbody>
+								</table>
+								<hr>
+								{{#book.excerpt}}
+								<h2>{{strings.buy_excerpt}}</h2>
+								<hr>
+								<div id="previewdiv">
+									{{book.excerpt}}
+								</div>
+								{{/book.excerpt}}
+								  
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

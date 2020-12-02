@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<epublibrary>
+    <epubitem>
+        <title>Welcome to English Majors Reviewers and Editors Publishing</title>
+        <author>EMRE Team</author>
+        <coverHref>/epub_content/welcome_to_english_majors_reviewers_and_editors/OPS/img/cover/emredemo-cover.png</coverHref>
+        <packagePath>OPS/package.opf</packagePath>
+        <rootUrl>/epub_content/welcome_to_english_majors_reviewers_and_editors</rootUrl>
+    </epubitem>
+    <epubitem>
+        <title>Steam City Pirates Sample</title>
+        <author>Jim Musgrave</author>
+        <coverHref>/epub_content/steam_city_pirates-jim_musgrave-sample/OPS/img/cover/jimmusgrave_steamcitypirates_ebook_finalweb.jpg</coverHref>
+        <packagePath>OPS/package.opf</packagePath>
+        <rootUrl>/epub_content/steam_city_pirates-jim_musgrave-sample</rootUrl>
+    </epubitem>
+    <epubitem>
+        <title>Forevermore</title>
+        <author>Jim Musgrave</author>
+        <coverHref>/epub_content/forevermore-jim_musgrave/OPS/img/cover/forevermore-cover.png</coverHref>
+        <packagePath>OPS/package.opf</packagePath>
+        <rootUrl>/epub_content/forevermore-jim_musgrave</rootUrl>
+    </epubitem>
+</epublibrary>

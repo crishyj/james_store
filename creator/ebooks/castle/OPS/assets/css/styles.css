@@ -1,0 +1,164 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+
+
+@font-face {
+  font-family: 'EstebanRegular';
+  src: url("../fonts/esteban-regular.otf"), url("../fonts/esteban-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Arvo';
+  src: url("../fonts/arvo-regular.otf"), url("../fonts/arvo-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Arvo';
+  src: url("../fonts/arvo-bold.otf"), url("../fonts/arvo-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Arvo';
+  src: url("../fonts/Arvo-Italic.otf"), url("../fonts/Arvo-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'sketch';
+  src: url("../fonts/sketch.otf"), url("../fonts/sketch.ttf") format("truetype");
+ }
+
+
+  
+/* line 1, ../sass/forevermore/readers/_forevermore-reader.scss */
+
+#container-reverse {
+  background-color: #000000;
+  font-family: 'Arvo-Regular';
+  padding: 1em 12%;
+  color: #FFF; }
+
+
+  
+b, strong{
+  font-weight: bold;
+}
+
+i, em{
+  font-style: italic;
+}
+
+.dropcap::first-letter { float: left; font-size: 4em; margin-top:-10px; padding-top: 4px; padding-right: 8px; padding-left: 3px; }
+.dropcap_med::first-letter { float: left; font-size: 3em; margin-top:-10px; padding-top: 4px; padding-right: 8px; padding-left: 3px; }
+.dropcap_small::first-letter { float: left; font-size: 2em; margin-top:-10px; line-height: 1.8em; padding-top: 4px; padding-right: 8px; padding-left: 3px; }
+
+#container-normal {
+  font-family: 'Arvo-Regular';
+  padding: 1em 12%;
+  color: #000000; }
+#container-steam {
+  background-image: url(../images/paper-background-ink.png);
+  background-size: 100%;
+  background-repeat: no-repeat repeat;
+  font-family: 'sketch';
+  padding: 1em 12%;
+  color: #000000; }
+
+
+
+  
+h1 
+{ 
+    font-size: 3.2em; 
+} 
+
+#container-steam h1{
+  font-family: 'sketch';
+}
+#container-steam h2{
+  font-family: 'sketch';
+}
+#container-steam p{
+  font-family: 'sketch';
+}
+
+h2 
+    { 
+    font-size: 2.6em;     
+} 
+
+h3 
+    { 
+    font-size: 2.2em; 
+} 
+
+h4 
+    { 
+    font-size: 2.0em;     
+} 
+
+h5 
+    { 
+    font-size: 1.8em;     
+} 
+
+p 
+    { 
+    font-size: 1.8em;     
+}
+
+
+table 
+  {  
+  border-spacing: 0; 
+  border-collapse: collapse; 
+} 
+
+.clear 
+    { 
+    clear:both; 
+} 
+
+.right 
+    { 
+    float: right; 
+} 
+
+.left 
+    { 
+    float: left; 
+}
+
+td  
+  { 
+  text-align: left; 
+  font-weight: normal; 
+}
+
+li {
+  margin-left:30px;
+}
+

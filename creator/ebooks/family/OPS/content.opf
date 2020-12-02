@@ -1,0 +1,85 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
+  <metadata>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns0="http://www.idpf.org/2007/opf">Jim Musgrave</dc:creator>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Forevermore</dc:title>
+    <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/" id="pub-id">urn:uuid:730c5ab0-380c-11e4-916c-0800200c9a66</dc:identifier>
+    <meta property="dcterms:modified">2014-09-09T12:32:00Z</meta>
+    <meta name="cover" content="cover-image"/>
+    <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">en</dc:language>
+</metadata>
+  <manifest>
+    <!-- Styles -->
+    <item href="assets/css/styles.css" id="styles-css" media-type="text/css"/>
+
+    <!-- Scripts -->
+    <!--<item href="javascript/libraries/jquery-1.11.1.min.js" id="jquery" media-type="application/javscript"/>-->
+
+    <!-- TOC -->
+    <item href="toc.xhtml" id="toc-xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="toc.ncx" id="toc-ncf" media-type="application/x-dtbncx+xml"/>
+    
+    <!-- Readers -->
+    <item href="text/00-cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+    <item href="text/01-acknowledgements.xhtml" id="acknowledgements" media-type="application/xhtml+xml"/>
+    <item href="text/02-dedication.xhtml" id="dedication" media-type="application/xhtml+xml"/>
+    <item href="text/03-prologue.xhtml" id="prologue" media-type="application/xhtml+xml"/>
+    <item href="text/04-chapter_01.xhtml" id="chapter_01" media-type="application/xhtml+xml"/>
+    <item href="text/05-chapter_02.xhtml" id="chapter_02" media-type="application/xhtml+xml"/>
+    <item href="text/06-chapter_03.xhtml" id="chapter_03" media-type="application/xhtml+xml"/>
+    <item href="text/07-chapter_04.xhtml" id="chapter_04" media-type="application/xhtml+xml"/>
+    <item href="text/08-chapter_05.xhtml" id="chapter_05" media-type="application/xhtml+xml"/>
+    <item href="text/09-chapter_06.xhtml" id="chapter_06" media-type="application/xhtml+xml"/>
+    <item href="text/10-chapter_07.xhtml" id="chapter_07" media-type="application/xhtml+xml"/>
+    <item href="text/11-chapter_08.xhtml" id="chapter_08" media-type="application/xhtml+xml"/>
+    <item href="text/12-chapter_09.xhtml" id="chapter_09" media-type="application/xhtml+xml"/>
+    <item href="text/13-chapter_10.xhtml" id="chapter_10" media-type="application/xhtml+xml"/>
+    <item href="text/14-chapter_11.xhtml" id="chapter_11" media-type="application/xhtml+xml"/>
+    <item href="text/15-chapter_12.xhtml" id="chapter_12" media-type="application/xhtml+xml"/>
+    <item href="text/16-epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml"/>
+    <item href="text/17-mountsinai-prologue.xhtml" id="mountsinai-prologue" media-type="application/xhtml+xml"/>
+    <item href="text/18-mountsinai-chapter_01.xhtml" id="mountsinai-chapter_01" media-type="application/xhtml+xml"/>
+    <item href="text/19-credits.xhtml" id="credits" media-type="application/xhtml+xml"/>
+    <item href="text/20-abouttheauthor.xhtml" id="abouttheauthor" media-type="application/xhtml+xml"/>
+    <item href="text/21-otherworks.xhtml" id="otherworks" media-type="application/xhtml+xml"/>
+
+    <!-- Fonts -->
+    <item href="assets/fonts/esteban-regular.otf" id="esteban-regular-otf" media-type="application/octet-stream"/>
+    <item href="assets/fonts/arvo-regular.otf" id="arvo-regular-otf" media-type="application/octet-stream"/>
+    <item href="assets/fonts/arvo-bold.otf" id="arvo-bold-otf" media-type="application/octet-stream"/>
+    <item href="assets/fonts/esteban-regular.ttf" id="esteban-regular-ttf" media-type="application/octet-stream"/>
+    <item href="assets/fonts/arvo-regular.ttf" id="arvo-regular-ttf" media-type="application/octet-stream"/>
+    <item href="assets/fonts/arvo-bold.ttf" id="arvo-bold-ttf" media-type="application/octet-stream"/>
+
+    <!-- Content images -->
+    <item href="img/cover/forevermore-cover.png" id="cover-image" media-type="image/png"/>
+
+    <!-- Global images -->
+    <item href="assets/images/paper-background-ink.png" id="paper-background-ink" media-type="image/png"/>
+    <item href="assets/images/section-break.png" id="section-break" media-type="image/png"/>
+  </manifest>
+  <spine toc="toc-ncf">
+    <!--<itemref idref="cover" />-->
+    <itemref idref="acknowledgements" />
+    <itemref idref="dedication" />
+    <itemref idref="prologue" />
+    <itemref idref="chapter_01" />
+    <itemref idref="chapter_02" />
+    <itemref idref="chapter_03" />
+    <itemref idref="chapter_04" />
+    <itemref idref="chapter_05" />
+    <itemref idref="chapter_06" />
+    <itemref idref="chapter_07" />
+    <itemref idref="chapter_08" />
+    <itemref idref="chapter_09" />
+    <itemref idref="chapter_10" />
+    <itemref idref="chapter_11" />
+    <itemref idref="chapter_12" />
+    <itemref idref="epilogue" />
+    <itemref idref="mountsinai-prologue" />
+    <itemref idref="mountsinai-chapter_01" />
+    <itemref idref="credits" />
+    <itemref idref="abouttheauthor" />
+    <itemref idref="otherworks" />
+  </spine>
+</package>

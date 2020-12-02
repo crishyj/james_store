@@ -1,0 +1,32 @@
+<div class="col-xs-4 col-sm-3 col-md-2 library-item">
+    <div class='info-wrap'>
+        <!-- <div class='caption book-info'>
+            <h4 class='title'>{{ epub.title }}</h4>
+            <div class='author'>{{ epub.author}}{{^epub.author}}No Author Listed{{/epub.author}}</div>
+        </div> -->
+
+            <button type="button" style="background: none; border: none; padding: 0; margin: 0;" class="buyBook" id="buy{{epub.id}}" data-coverHref="{{epub.coverHref}}" data-book="{{epub.id}}"  data-excerpt="{{epub.excerpt}}" data-price="{{epub.price}}" data-desc="{{epub.description}}"  aria-label="{{epub.title}}" data-stripe="{{epub.stripe}}" title="{{epub.title}}"  tabindex="{{count.tabindex}}">
+        {{#epub.coverHref}}
+        <img aria-hidden="true" class="img-responsive" src="{{ epub.coverHref }}" alt="" /> 
+        {{/epub.coverHref}}
+        {{^epub.coverHref}}
+        <div aria-hidden="true" class="no-cover" style="background-image: url('{{noCoverBackground}}')"><p>{{epub.title}}</p>
+		<a href="#" class="btn btn-primary buyBook"  data-book="{{epub.id}}" data-author="{{epub.author}}" data-coverHref="{{epub.coverHref}}"  data-price="{{epub.price}}" data-stripe="{{epub.stripe}}" data-desc="{{epub.description}}" data-excerpt="{{epub.excerpt}}"  aria-label="{{epub.title}}" role="button">{{epub.price}}</a></div>
+        {{/epub.coverHref}}
+    </button>
+    </div>
+            
+    <!-- <div class="caption buttons">
+        <a href="#" class="btn btn-default read" data-book="{{epub.packageUrl}}" role="button">{{strings.i18n_read}}</a>
+        <a href="#details-modal" data-book="{{epub.packageUrl}}" aria-pressed="true" class="btn btn-default details" data-toggle="modal" role="button">{{strings.i18n_details}}</a>
+    </div> -->
+    <div class='caption book-info'>
+        <h4 class='title'>{{ epub.title }}</h4>
+        <div class='author'>{{ epub.author}}{{^epub.author}}{{/epub.author}} - {{ epub.genre}}{{^epub.genre}}General{{/epub.genre}}</div>
+        
+       
+    </div>
+	 <div class="buttons">
+		<a href="#" class="btn btn-primary buyBook" data-stripe="{{epub.stripe}}" data-book="{{epub.id}}" data-coverHref="{{epub.coverHref}}" data-author="{{epub.author}}" data-price="{{epub.price}}" data-desc="{{epub.description}}"  data-excerpt="{{epub.excerpt}}" aria-label="{{epub.title}}" role="button">{{epub.price}}</a></div>
+	 </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+	xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:gap="http://phonegap.com/ns/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="app.embellisher-ereader.emre" version="0.0.1" versioncode="1">
+    <name>embellisher-ereader</name>
+    <description>
+        Read epub 3 books and buy books from the Ebellisher epub store!
+    </description>
+    <author email="info@vansteinegroentjes.nl" href="http://vansteinengroentjes.nl">
+        Van Stein &amp; Groentjes B.V.
+    </author>
+	<icon src="images/embellisherereader-touch-icon.png" />
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+	
+	<gap:config-file platform="android" parent="/manifest">
+		<application android:debuggable="true" />
+	</gap:config-file>
+	
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	
+	<feature name="http://api.phonegap.com/1.0/network" />
+	
+</widget>

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+	<head>
+		<meta content="urn:uuid:730c5ab0-380c-11e4-916c-0800200c9a66" name="dtb:uid"/>
+	</head>
+	<docTitle>
+		<text>Forevermore</text>
+	</docTitle>
+	<navMap>
+		<!--<navPoint id="cover" playOrder="1">
+			<navLabel>
+				<text>Cover</text>
+			</navLabel>
+			<content src="text/00-cover.xhtml"/>
+		</navPoint>-->
+		<navPoint id="acknowledgements" playOrder="1">
+			<navLabel>
+				<text>Acknowledgements</text>
+			</navLabel>
+			<content src="text/01-acknowledgements.xhtml"/>
+		</navPoint>
+		<navPoint id="dedication" playOrder="2">
+			<navLabel>
+				<text>Dedication</text>
+			</navLabel>
+			<content src="text/02-dedication.xhtml"/>
+		</navPoint>
+		<navPoint id="prologue" playOrder="3">
+			<navLabel>
+				<text>Prologue</text>
+			</navLabel>
+			<content src="text/03-prologue.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_01" playOrder="4">
+			<navLabel>
+				<text>Chapter 1</text>
+			</navLabel>
+			<content src="text/04-chapter_01.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_02" playOrder="5">
+			<navLabel>
+				<text>Chapter 2</text>
+			</navLabel>
+			<content src="text/05-chapter_02.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_03" playOrder="6">
+			<navLabel>
+				<text>Chapter 3</text>
+			</navLabel>
+			<content src="text/06-chapter_03.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_04" playOrder="7">
+			<navLabel>
+				<text>Chapter 4</text>
+			</navLabel>
+			<content src="text/07-chapter_04.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_05" playOrder="8">
+			<navLabel>
+				<text>Chapter 5</text>
+			</navLabel>
+			<content src="text/08-chapter_05.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_06" playOrder="9">
+			<navLabel>
+				<text>Chapter 6</text>
+			</navLabel>
+			<content src="text/09-chapter_06.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_07" playOrder="10">
+			<navLabel>
+				<text>Chapter 7</text>
+			</navLabel>
+			<content src="text/10-chapter_07.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_08" playOrder="11">
+			<navLabel>
+				<text>Chapter 8</text>
+			</navLabel>
+			<content src="text/11-chapter_08.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_09" playOrder="12">
+			<navLabel>
+				<text>Chapter 9</text>
+			</navLabel>
+			<content src="text/12-chapter_09.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_10" playOrder="13">
+			<navLabel>
+				<text>Chapter 10</text>
+			</navLabel>
+			<content src="text/13-chapter_10.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_11" playOrder="14">
+			<navLabel>
+				<text>Chapter 11</text>
+			</navLabel>
+			<content src="text/14-chapter_11.xhtml"/>
+		</navPoint>
+		<navPoint id="chapter_12" playOrder="15">
+			<navLabel>
+				<text>Chapter 12</text>
+			</navLabel>
+			<content src="text/15-chapter_12.xhtml"/>
+		</navPoint>
+		<navPoint id="epilogue" playOrder="16">
+			<navLabel>
+				<text>Epilogue</text>
+			</navLabel>
+			<content src="text/16-epilogue.xhtml"/>
+		</navPoint>
+		<navPoint id="mountsinai-prologue" playOrder="17">
+			<navLabel>
+				<text>Mount Sinai: Prologue</text>
+			</navLabel>
+			<content src="text/17-mountsinai-prologue.xhtml"/>
+		</navPoint>
+		<navPoint id="mountsinai-chapter_01" playOrder="18">
+			<navLabel>
+				<text>Mount Sinai: Chapter 1</text>
+			</navLabel>
+			<content src="text/18-mountsinai-chapter_01.xhtml"/>
+		</navPoint>
+		<navPoint id="credits" playOrder="19">
+			<navLabel>
+				<text>Credits</text>
+			</navLabel>
+			<content src="text/19-credits.xhtml"/>
+		</navPoint>
+		<navPoint id="abouttheauthor" playOrder="20">
+			<navLabel>
+				<text>About the Author</text>
+			</navLabel>
+			<content src="text/20-abouttheauthor.xhtml"/>
+		</navPoint>
+		<navPoint id="otherworks" playOrder="21">
+			<navLabel>
+				<text>Other Works</text>
+			</navLabel>
+			<content src="text/21-otherworks.xhtml"/>
+		</navPoint>
+	</navMap>
+</ncx>

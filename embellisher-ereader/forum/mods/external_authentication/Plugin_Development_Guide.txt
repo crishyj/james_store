@@ -1,0 +1,83 @@
+This is a short guide to developing a plugin to allow an external application 
+(such as Drupal, Joomla, Wordpress, etc.) serve as the authentication master 
+for Phorum using the External Authentication module.  Please remember you can 
+also use the existing plugins to provide examples and the attached base plugin 
+to use as a base to build your plugin.  In fact, the base_plugin folder can 
+be easily renamed and each file modified as needed for your plugin.
+
+Create a folder for your plugin in the external_authentication/plugins_bin.  
+This folder will hold all of the files necessary to run your plugin.
+
+Create the info.php file.  This file contains the necessary details to integrate 
+your plugin into the module.  The base_plugin/info.php file contains examples 
+of the required details.  The "required_version" is the version of the External 
+Authentication module which support the necessary hooks and settings for your 
+plugin.
+
+This module currently supports two hooks in the Phorum system.  To use these or 
+any Phorum hooks, you should create a file for named "hook_THE_HOOK.php" and 
+place the code for your hook to run in that file.  Please note the required 
+return data when building your hook.
+The currently supported hooks are:
+    after_register
+    common_post_user 
+    common
+    start_output
+    user_authentication
+    user_delete
+    user_save
+    user_session_restore
+
+If you need new hook support for your plugin, please request it and it will be 
+promptly added to a new version of this module.
+
+The main hook is the user_session_restore hook.  This hook is necessary to pass 
+your external application's session data on to Phorum.  More info and examples 
+can be found in the base_plugin/hook_user_session_restore.php file.
+
+If you need to present settings to the forum admin, you can use the settings.php 
+and settings_post.php files.  These files execute code in the External 
+Authentication module's settings page.  Again, info and examples can be found 
+in the base_plugin files.
+
+By default, this module allows the forum admin to disable/enable registration, 
+login, and logut directly in Phorum.  If your plugin does not support Phorum 
+registration, login, or logout, you can remove these options from the settings 
+page.  Please see the base_plugin/settings_post.php for details on how to remove 
+these options.
+
+The settings_post.php file can also be used to setup a user id synchronization 
+table in the Phorum database.  This database can be used to synchronize users 
+when the username cannot be used.  This is especially useful in systems where 
+users can change their usernames. Each time a user is created, your code can 
+replicate that user either to Phorum or to the external application.  
+
+There are three functions you can use with the synchronization table:
+
+phorum_mod_external_authentication_db_add_user($phorum_user_id, $external_user_id)
+- This function adds a user to the synchronization table, linking their Phorum 
+user id and the external applications user id together.
+
+phorum_mod_external_authentication_db_get_user($user_id, $source)
+- This function returns the desired user id.  The inputs are a user id and
+either MOD_EXT_AUTH_GET_EXTERNAL_USER or MOD_EXT_AUTH_GET_PHORUM_USER.  For
+example.  If you want to get the Phorum user id for an external user, you might 
+use this line of code:
+$phorum_user_id = phorum_mod_external_authentication_db_get_user($external_user_id, MOD_EXT_AUTH_GET_PHORUM_USER);
+
+phorum_mod_external_authentication_db_delete_user ($user_id, $source)
+- This function deletes a user from the synchronization table.  The inputs are a
+user id and either MOD_EXT_AUTH_DELETE_EXTERNAL_USER or 
+MOD_EXT_AUTH_DELETE_PHORUM_USER.
+
+If you would like to allow the settings page to search for the external 
+application's server path, you can set the $external_application_path_ids array
+in the settings_post.php file for your plugin.
+This array consists of two values:
+    unique_file_name is a file which should be unique to your external
+        application.  Please note that if the file is in a sub-directory of the
+        external application, you should include that sub-directory in this
+        field (eg. "includes/misc/myfile.php").
+    unique_string is an optional string to search for in your unique file.
+        If you are sure that your file is unique, you can simply leave this
+        string empty.

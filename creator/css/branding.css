@@ -1,0 +1,52 @@
+/* line 74, ../sass/viewer/_toolbar.scss */
+
+
+.icon-readium {
+  background-image: url("../images/embellisherereader-touch-icon.png");
+  width: 20px;
+  height: 20px;
+  float:left;
+  background-size: auto 20px; 
+  margin-right:10px;
+}
+
+
+.splash-logo{
+	background-image: url("../images/about-embellisher-logo.png");
+	background-repeat: no-repeat;
+	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	width:276px;
+	height:225px;
+	background-size: auto 225px;
+}
+.parner-logo{
+	background-image: url("../images/partner_logos.png");
+	background-repeat: no-repeat;
+	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	width:276px;
+	height:65px;
+	background-size: 276px auto;
+}
+@media (max-width: 480px) {
+	.splash-logo {
+		max-width:90%;
+		margin-left:auto;
+		margin-right:auto;
+		width:138px;
+		height:112px;
+		background-size: 138px auto;
+	}
+	.parner-logo{
+		max-width:90%;
+		margin-left:auto;
+		margin-right:auto;
+		width:148px;
+		height:35px;
+		background-size: 148px auto;
+	}
+	
+}

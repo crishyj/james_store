@@ -1,0 +1,63 @@
+v5.2.1.04
+ - Enhancement: Added the ability to synchronize Drupal languages with Phorum 
+   languages.
+ - Enhancement: Support added for the common_post_user and user_save hooks.
+ - Bugfix: Locale settings could cause a template error in Drupal.
+ - Enhancement: Added support for the path prefix from the Drupal Locale module.
+   Thanks go to Phorum user Sergej for pointing out the need for this and all 
+   of the other help in testing the Drupal plugin.
+ - Plugin: Drupal 6.x plugin added.
+ - Plugin: GroupOffice plugin added thanks to the author, Phorum user hansvd.
+v5.2.1.03
+ - Bugfix: Missing quotes in language file.
+ - Enhancement: Support added for the user_delete hook.
+ - Enhancement: Added support for embedded links in the login, logout, and 
+   register link suppression code.
+ - Enhancement: Details added so some log events.
+ - Enhancement: Added support for the common and start_output hooks.
+ - Enhancement: Added support for a plugin to register a new CSS version.
+ - Enhancement: Added support for complete removing the user links (login, 
+   logout, registration) from the Simple Rounded template.
+ - Bugfix: Disabling user actions (login, logout, registration) from Phorum was 
+   not implemented properly.
+ - Enhancement: Added support for plugins to supply a unique file name and a 
+   unique string from that file which will be used to attempt to find the server 
+   path for the external application.
+ - Enhancement: Added support for an author field in the plugin info.php file so 
+   that plugin developers can be acknowledged on the External Authentication 
+   settings page.
+ - Enhancement: Added support for a user id synchronization table.  This table 
+   allows the Phorum user id and the external application's user id to be 
+   different yet linked and frees a plugin developer from depending on the 
+   username for authenticating between applications.
+ - Enhancement: The Elgg plugin will now automatically update the Phorum 
+   database whenever an Elgg user is created or updated.
+ - Bugfix: Elgg mod now properly uses the assigned Phorum path.
+ - Enhancement: Added the ability for the admin to automatically add each Elgg 
+   user to a Phorum group named "Elgg Users."
+v5.2.1.02
+ - Enhancement: Added an Elgg plugin which detects username conflicts if 
+   registration is allowed in Phorum.
+ - Enhancement: Added the ability for plugins to override and remove the options 
+   to transfer admin status to Phorum, and disable/enable Phorum registration, 
+   login, and logout.
+ - Enhancement: Added  the Phorum server path to the help for the external 
+   application path field for use as a reference for determining that 
+   application's server path.
+ - Enhancement: Added support for the after_register hook.
+ - Enhancement: Created a plugin development guide and a base plugin to use as 
+   an base/example for plugin building
+v5.2.1.01
+ - Enhancement: Plugin hooks are now stored in the database when the plugin is 
+   selected, rather than running a file_exists check each time the hook is 
+   called. This should help streamline the code.
+ - Modification: All plugin hook files must now start with "hook_" to avoid 
+   possible confusion if an info or settings hook is ever created
+ - Enhancement: added the ability for plugins to require that this module be at 
+   a certain release level or above.
+ - Enhancement Bugfix: Add the lang hook to info.txt for full language support. 
+ - Enhancement: Added an english.php language file which actually uses the 
+   $PHORUM["language"] to pull in plugin language files of any language with a 
+   fallback on 
+v5.2.1.00
+ - Initial release
